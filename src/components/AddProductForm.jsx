@@ -13,14 +13,22 @@ function AddProductForm({ onAddCoffeeProduct }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+            fetch("http://localhost:3001/coffee")
+            .then((r) => r.json())
+            .then((products) => {
+                const nextId = Math.max(...products.map((p) => Number(p.id)), 0) + 1;
+
         // Handle form submission logic here
-        fetch("http://localhost:3001/coffee", {
+        return fetch("http://localhost:3001/coffee", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(formData)
-        })
+            body: JSON.stringify({
+                ...formData, id: String(nextId),
+        }),
+        });
+    })
         .then(r => {
             if (!r.ok){
                 throw new Error("failed to add a new coffee product")

@@ -26,11 +26,11 @@ body {
   font-size: 5rem;
   color: black;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 50px;
 }
 
 .home p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
   text-align: center;
 }
@@ -153,5 +153,25 @@ body {
 .navbar a.active {
   border-bottom: 3px solid white;
   padding-bottom: 4px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.logout-btn {
+  background: #8b0000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
 }
 

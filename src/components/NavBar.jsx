@@ -9,6 +9,6 @@ function NavBar() {
                 <NavLink to="/adminportal">Admin Portal</NavLink>
         </nav>
     );
-}
 
+}
 export default NavBar;
