@@ -30,40 +30,19 @@
       "price": 14.5
     },
     {
-      "name": null,
-      "description": null,
-      "origin": null,
-      "price": 0,
-      "id": "m9lCZXZfi8g"
+      "id": "4",
+      "name": "French Roast",
+      "description": "Dark, smoky flavor with a bold finish",
+      "origin": "Ethiopia",
+      "price": 11
     },
     {
-      "name": null,
-      "description": null,
-      "origin": null,
-      "price": 0,
-      "id": "aL-iEAkRe2Y"
-    },
-    {
-      "name": null,
-      "description": null,
-      "origin": null,
-      "price": 0,
-      "id": "oDQNp26z5fU"
-    },
-    {
-      "name": null,
-      "description": null,
-      "origin": null,
-      "price": 0,
-      "id": "cmgLrAJmqMg"
-    },
-    {
-      "name": "wee",
-      "description": "dsdff",
-      "origin": "fsdff",
-      "price": 5,
-      "id": "Yscf-pHOb-w"
+      "id": "5",
+      "name": "Breakfast Blend",
+      "description": "Light Roast, bright and lively flavor",
+      "origin": "Costa Rica",
+      "price": 9
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+   
+  ]
 }

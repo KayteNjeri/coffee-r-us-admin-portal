@@ -55,7 +55,7 @@ function AddProductForm({ onAddCoffeeProduct }) {
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Coffee Name</label>
                 <input 
-                    id={id}
+                    id="name"
                     type="text" 
                     name="name" 
                     value={formData.name}
@@ -64,7 +64,7 @@ function AddProductForm({ onAddCoffeeProduct }) {
 
                 <label htmlFor="description">Description</label>
                 <textarea
-                    id={id}
+                    id="description"
                     name="description"
                     value={formData.description}
                     onChange={handleChange}
@@ -72,7 +72,7 @@ function AddProductForm({ onAddCoffeeProduct }) {
 
                 <label htmlFor="origin">Origin</label>
                 <input 
-                    id={id}
+                    id="origin"
                     type="text" 
                     name="origin" 
                     value={formData.origin}
@@ -81,7 +81,7 @@ function AddProductForm({ onAddCoffeeProduct }) {
 
                 <label htmlFor="price">Price</label>
                 <input 
-                    id={id}
+                    id="price"
                     type="number" 
                     name="price" 
                     value={formData.price}

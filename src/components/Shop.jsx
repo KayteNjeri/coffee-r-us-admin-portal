@@ -14,8 +14,11 @@ function Shop () {
                 }
                 return r.json();
                 })
-            .then(coffeeProducts => setProducts(coffeeProducts))
-            .catch(error => console.error(error.message));
+            .then((coffeeProducts) => {
+                console.log("coffee Products:", coffeeProducts);
+                setProducts(coffeeProducts)
+            })
+            .catch((error) => console.error(error.message));
     }, []);
  
 
@@ -79,8 +82,8 @@ return (
                     <ProductCard 
                         key={coffee.id}
                         coffee={coffee}
-                        onUpdateCoffeeProduct={handleUpdateCoffeeProduct}
-                        onDeleteCoffeeProduct={handleDeleteCoffeeProduct}
+                        isAdmin={false}
+                        
                     />
                 ))
             }
