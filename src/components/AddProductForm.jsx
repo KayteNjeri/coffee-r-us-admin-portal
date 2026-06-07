@@ -41,15 +41,17 @@ function AddProductForm({ onAddCoffeeProduct }) {
     };
 
     const handleChange = (event) => {
-        setFormData(previousData => ({
-            ...previousData,
-            [event.target.name]: event.target.value
-        }));
-    };
+         const { name, value } = event.target;
+
+    setFormData(prev => ({
+        ...prev,
+        [name]: name === "price" ? Number(value) : value
+    }));
+};
 
     return (
         <div className="add-product-form" >
-            <h2>Add New Coffee Product</h2>
+            
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Coffee Name</label>
                 <input 

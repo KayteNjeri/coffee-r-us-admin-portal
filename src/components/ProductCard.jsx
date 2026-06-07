@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Links } from "react-router-dom";
 
 function ProductCard({ coffee, onUpdateCoffeeProduct, onDeleteCoffeeProduct }) {
+    if (!coffee) {
+        return null;
+    }
+    
     const [newPrice, setNewPrice] = useState(coffee.price);
 
     const handleUpdate = () => {
-        fetch(`http://localhost:3001/coffee/${product.id}`, {
+        fetch(`http://localhost:3001/coffee/${coffee.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -26,14 +29,14 @@ function ProductCard({ coffee, onUpdateCoffeeProduct, onDeleteCoffeeProduct }) {
         };
 
     const handleDelete = () => {
-        fetch(`http://localhost:3001/coffee/${product.id}`, {
+        fetch(`http://localhost:3001/coffee/${coffee.id}`, {
             method: "DELETE"
         })
         .then(r => {
             if (!r.ok){
                 throw new Error("failed to delete the coffee product")
             }
-            onDeleteCoffeeProduct(product.id);
+            onDeleteCoffeeProduct(coffee.id);
         })
         .catch(error => console.error(error.message));
     };
@@ -48,7 +51,7 @@ function ProductCard({ coffee, onUpdateCoffeeProduct, onDeleteCoffeeProduct }) {
             <input 
                 type="number" 
                 value={newPrice} 
-                onChange={(e) => setNewPrice(e.target.value)}
+                onChange={(e) => setNewPrice(Number(e.target.value))}
             />
 
             <button onClick={handleUpdate}>Update</button>
