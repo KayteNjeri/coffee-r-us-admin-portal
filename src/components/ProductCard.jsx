@@ -53,9 +53,9 @@ function ProductCard({ coffee, onUpdateCoffeeProduct, onDeleteCoffeeProduct }) {
                 value={newPrice} 
                 onChange={(e) => setNewPrice(Number(e.target.value))}
             />
-
-            <button onClick={handleUpdate}>Update</button>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleUpdate}>Update Price</button>
+            <button onClick={handleDelete}>Delete Product</button>
+            
         </div>
     );
 }

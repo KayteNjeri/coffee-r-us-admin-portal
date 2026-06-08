@@ -42,14 +42,6 @@
       "description": "Light Roast, bright and lively flavor",
       "origin": "Costa Rica",
       "price": 9
-    },
-    {
-      "name": "Capuccino",
-      "description": "Espresso, steamed milk",
-      "origin": "Kenya",
-      "price": 20,
-      "id": "ZnJe9bHdd3o"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

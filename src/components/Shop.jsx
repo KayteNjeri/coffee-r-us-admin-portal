@@ -1,27 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProductCard from "./ProductCard";
+import useCoffee from "../hooks/useCoffee";
 
 function Shop () {
-    const [products, setProducts] = useState([]);
+    const { products, setProducts } = useCoffee();
     const [searchTerm, setSearchTerm] = useState("");
     
-    //GET request to fetch coffee products from the server
-  useEffect(() => {
-        fetch("http://localhost:3001/coffee")
-            .then(r => {
-                if (!r.ok){
-                    throw new Error("failed to fetch coffee products")
-                }
-                return r.json();
-                })
-            .then((coffeeProducts) => {
-                console.log("coffee Products:", coffeeProducts);
-                setProducts(coffeeProducts)
-            })
-            .catch((error) => console.error(error.message));
-    }, []);
- 
-
     //Update product from ProductCard component
     const handleUpdateCoffeeProduct = (updatedCoffeeProduct) => {
         setProducts((prev) => 
@@ -45,7 +29,6 @@ function Shop () {
     
 return (
         <section className="coffee-collection">
-        
 
     {/* Search */}
         <aside className="sidebar">
